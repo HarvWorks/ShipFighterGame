@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Bullet</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="paper.js"></script>
+        <script type="text/paperscript" canvas="game">
+
+var shape0f =[]
+    shape0f = [[function(){
+    this.path = new Path.Rectangle({
+        size: [28, 28],
+        fillColor: 'grey'
+    });
+},
+function(){
+    this.path = new Path.Rectangle({
+        size: [28, 328],
+        fillColor: 'black'
+    });
+}]];
+var array = [[[]]];
+var numberArr = [[0]]
+
+
+for(var i = 0; i < 3; i++){
+    var temp = shape0f[0].slice(numberArr[0][0],numberArr[0][0]+1)[0];
+    console.log(temp)
+    array[0][i] = new temp();
+}
+
+// array[0][0]= new shape0f[0]()
+// array[0][1] = new shape0f[0]()
+// var temp = shape0f.slice(0,1)[0];
+// array[0][2] = new temp();
+// // array[0][16] = new shape0f.splice(0,1)[0]();
+var temp = shape0f[0].slice(0,1)[0];
+array[0][16] = new temp();
+var temp = shape0f[0].slice(0,1)[0];
+array[0][17] = new temp();
+
+
+console.log(array[0])
+array[0][0].path.position = new Point(304, 226)
+
+array[0][2].path.position = new Point(804, 226)
+array[0][1].path.position = new Point(804, 526)
+array[0][16].path.position = new Point(300, 526)
+array[0][17].path.position = new Point(500, 526)
+
+
+// // shape1
+// shape1 = new Path({insert: false});
+// shape1.add(new Point(213.5, 239));
+// shape1.add(new Point(476.5, 279));
+// shape1.add(new Point(716, 233.5));
+// shape1.add(new Point(469, 74));
+// shape1.closed = true;
+
+// // exclude shape0 & shape1
+// res1 = new CompoundPath({
+//     children: [shape0.subtract(shape1), shape1.subtract(shape0)],
+//     fillColor: 'black'
+// });
+//  console.log(res1.intersects(shape0))
+
+// // exclude res1 & shape2
+// res2 = new CompoundPath({
+//     children: [res1.subtract(shape2), shape2.subtract(res1)],
+//     fillColor: 'black'
+// });
+// res1.remove()
+
+// // shape3
+// shape3 = new Path.Rectangle({
+//     point: [318, 148],
+//     size: [302, 302],
+//     insert: false
+// });
+
+// // exclude res2 & shape3
+// new CompoundPath({
+//     children: [res2.subtract(shape3), shape3.subtract(res2)],
+//     fillColor: 'black'
+// });
+
+// res2.remove()
+
+</script>
+<title></title>
+</head>
+<body>
+<canvas id="game">
+    <button type="button" name="Play">Play!</button>
+</canvas>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    background-color: #333333;
+}
+
+#game{
+    width: 1000px;
+    height: 700px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
